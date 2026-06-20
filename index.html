@@ -1,35 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>DINOly RAW</title>
-<style>
-    body { background:#111; color:#eee; font-family: monospace; padding:20px; }
-    .block { margin-bottom:20px; padding:10px; border:1px solid #444; }
-    input, textarea { width:100%; background:#222; color:#eee; border:1px solid #555; padding:8px; }
-</style>
-</head>
-<body>
+<!-- Live-Melder -->
+<section id="live">
+  <h2>Live-Melder</h2>
 
-<h2>DINOly RAW Bench</h2>
+  <div class="status-block" id="status-anker">
+    <strong>ANKER (S01)</strong><br>
+    Status: <span class="state ready">bereit</span><br>
+    Modus: Relation aktiv (IQ / QI / EVO / UPD / UPG / BIOS / CALC)
+  </div>
 
-<div class="block">
-    <h3>Input</h3>
-    <input id="benchInput" placeholder="type raw input...">
-</div>
-
-<div class="block">
-    <h3>Output</h3>
-    <textarea id="benchOutput" rows="6" readonly></textarea>
-</div>
-
-<script>
-document.getElementById("benchInput").addEventListener("input", function() {
-    let v = this.value;
-    document.getElementById("benchOutput").value = v;
-});
-</script>
-
-</body>
-</html>
-
+  <div class="status-block" id="status-calc">
+    <strong>CALC-00</strong><br>
+    Status: <span class="state idle">wartet</span><br>
+    Modus: Operator steht bereit
+  </div>
+</section>
