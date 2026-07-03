@@ -4,4 +4,3 @@ export const ID_POOK = {
   behavior: "erzählt",
   active: false
 };
-
