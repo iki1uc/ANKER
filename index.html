@@ -1,16 +1,28 @@
-<!-- Live-Melder -->
-<section id="live">
-  <h2>Live-Melder</h2>
+<pre id="anker"></pre>
 
-  <div class="status-block" id="status-anker">
-    <strong>ANKER (S01)</strong><br>
-    Status: <span class="state ready">bereit</span><br>
-    Modus: Relation aktiv (IQ / QI / EVO / UPD / UPG / BIOS / CALC)
-  </div>
+<script type="module">
+  import { NOOP } from "../NOOP/noop.js";
 
-  <div class="status-block" id="status-calc">
-    <strong>CALC-00</strong><br>
-    Status: <span class="state idle">wartet</span><br>
-    Modus: Operator steht bereit
-  </div>
-</section>
+  async function load(){
+    const id = await fetch("./id.html").then(r => r.text());
+    const json = await fetch("./ANKER.json").then(r => r.json());
+
+    let out = "ANKER :: Neutral\n-------------------------\n";
+
+    out += `ID       → ${json.id}\n`;
+    out += `Axis     → ${json.axis}\n`;
+    out += `Gen      → ${json.gen}\n`;
+    out += `EIC      → ${json.eic}\n`;
+    out += `State    → ${json.state}\n`;
+    out += `Switch   → ${json.switch}\n\n`;
+
+    out += "NOOP-Modus\n";
+    out += `Mode     → ${NOOP.mode}\n`;
+    out += `Behavior → ${NOOP.behavior}\n`;
+    out += `Active   → ${NOOP.active}\n`;
+
+    document.getElementById("anker").textContent = out;
+  }
+
+  load();
+</script>
