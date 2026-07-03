@@ -4,4 +4,3 @@ export const ID_KOOP = {
   behavior: "verhalten",
   active: true
 };
-
