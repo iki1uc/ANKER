@@ -4,4 +4,3 @@ export const ID_NEUTRAL = {
   behavior: "enthält_sich",
   active: false
 };
-
