@@ -1,25 +1,25 @@
 <pre id="anker"></pre>
 
 <script type="module">
-  import { NOOP } from "../NOOP/noop.js";
+  import { ID_NEUTRAL } from "../ID/IDneutral.js";
 
   async function load(){
-    const id = await fetch("./id.html").then(r => r.text());
     const json = await fetch("./ANKER.json").then(r => r.json());
 
-    let out = "ANKER :: Neutral\n-------------------------\n";
+    let out = "ANKER :: FINAL\n-------------------------\n";
 
-    out += `ID       → ${json.id}\n`;
-    out += `Axis     → ${json.axis}\n`;
-    out += `Gen      → ${json.gen}\n`;
-    out += `EIC      → ${json.eic}\n`;
-    out += `State    → ${json.state}\n`;
-    out += `Switch   → ${json.switch}\n\n`;
+    out += `ID        → ${json.id}\n`;
+    out += `ID-Typ    → ${json.id_type}\n`;
+    out += `Axis      → ${json.axis}\n`;
+    out += `Gen       → ${json.gen}\n`;
+    out += `EIC       → ${json.eic}\n`;
+    out += `State     → ${json.state}\n`;
+    out += `Switch    → ${json.switch}\n\n`;
 
-    out += "NOOP-Modus\n";
-    out += `Mode     → ${NOOP.mode}\n`;
-    out += `Behavior → ${NOOP.behavior}\n`;
-    out += `Active   → ${NOOP.active}\n`;
+    out += "NEUTRAL-MODUS (ID_NEUTRAL)\n";
+    out += `Mode      → ${ID_NEUTRAL.mode}\n`;
+    out += `Behavior  → ${ID_NEUTRAL.behavior}\n`;
+    out += `Active    → ${ID_NEUTRAL.active}\n`;
 
     document.getElementById("anker").textContent = out;
   }
