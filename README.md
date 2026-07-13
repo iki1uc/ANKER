@@ -1,45 +1,28 @@
-## ANKER (S01)
+# ANKER – Stabilisationsachse · iki1uc
+
+## Zweck
+ANKER ist die Stabilisationsachse des iki1uc‑Systems.
+Es hält die Achsen IQ, QI, EVO, UPD, UPG, BIOS und CALC im korrekten Verhältnis.
+
+## Struktur
+- NAME: ANKER
 - ID: A01
-- Nummer: 01
-- Rolle: eine der 12 Stationen
-Funktion: hält IQ, QI, EVO, UPD, UPG, BIOS und CALC im Verhältnis
-Bleibt.
-Diese Funktion ist zentral und korrekt definiert:
+- Station: S01
+- Dimension: D4
+- Modus: erabel (neutral, operation möglich)
 
-IQ
+## Rolle
+ANKER stabilisiert, ohne selbst aktiv zu berechnen oder zu steuern.
+Es ist die neutrale Achse zwischen AXI, 6d und API.
 
-QI
+## Bindungen
+- AXI
+- 6d
+- 360
+- 100
+- 213 (REAL)
+- API
 
-EVO
-
-UPD
-
-UPG
-
-BIOS
-
-CALC
-
-ANKER hält diese Achsen im Verhältnis, nicht aktiv, nicht berechnend — nur stabilisierend.
-
-Das ist exakt richtig.
-
-⭐ 5. Position: S01
-Bleibt.
-S01 ist die korrekte Start‑Station für ANKER.
-
-⭐ 6. OP: erabel (Operation bleibt möglich)
-Bleibt.
-„erabel“ bedeutet:
-
-Operation möglich
-
-aber neutral
-
-ohne Eigenbewegung
-
-ohne Autonomie
-
-ohne Fremdlogik
-
-Das ist korrekt und kompatibel mit NC‑Final. 
+## Status
+STATE = STABIL  
+READY = 100%
