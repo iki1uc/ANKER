@@ -1,28 +1,55 @@
-<pre id="anker"></pre>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>ANKER – S01 · iki1uc</title>
 
-<script type="module">
-  import { ID_NEUTRAL } from "../ID/IDneutral.js";
+<style>
+body { background:#000; color:#0f0; font-family:monospace; padding:40px; }
+h1 { color:#0f0; letter-spacing:4px; margin-bottom:30px; }
+.block { background:#111; border:1px solid #333; padding:25px; margin-bottom:30px; border-radius:8px; }
+.title { font-size:22px; color:#6cf; margin-bottom:10px; }
+a { color:#6cf; text-decoration:none; font-weight:bold; }
+pre { background:#000; border-left:3px solid #6cf; padding:15px; margin-top:10px; white-space:pre-wrap; }
+</style>
+</head>
 
-  async function load(){
-    const json = await fetch("./ANKER.json").then(r => r.json());
+<body>
 
-    let out = "ANKER :: FINAL\n-------------------------\n";
+<h1>ANKER – S01 · iki1uc</h1>
 
-    out += `ID        → ${json.id}\n`;
-    out += `ID-Typ    → ${json.id_type}\n`;
-    out += `Axis      → ${json.axis}\n`;
-    out += `Gen       → ${json.gen}\n`;
-    out += `EIC       → ${json.eic}\n`;
-    out += `State     → ${json.state}\n`;
-    out += `Switch    → ${json.switch}\n\n`;
+<div class="block">
+    <div class="title">Stabilisationsachse</div>
+    <p>ANKER hält alle kritischen Achsen im Verhältnis.</p>
+</div>
 
-    out += "NEUTRAL-MODUS (ID_NEUTRAL)\n";
-    out += `Mode      → ${ID_NEUTRAL.mode}\n`;
-    out += `Behavior  → ${ID_NEUTRAL.behavior}\n`;
-    out += `Active    → ${ID_NEUTRAL.active}\n`;
+<div class="block">
+    <div class="title">Identität</div>
+    <p><a href="ID.html">→ ANKER‑Identität öffnen</a></p>
+</div>
 
-    document.getElementById("anker").textContent = out;
-  }
+<div class="block">
+    <div class="title">Stabilisierte Achsen</div>
+    <pre>
+IQ
+QI
+EVO
+UPD
+UPG
+BIOS
+CALC
+    </pre>
+</div>
 
-  load();
-</script>
+<div class="block">
+    <div class="title">System‑Module</div>
+    <a href="../AXI/index.html">AXI</a>
+    <a href="../6d/index.html">6d</a>
+    <a href="../360/index.html">360</a>
+    <a href="../100/index.html">100</a>
+    <a href="../213/index.html">213</a>
+    <a href="../API/index.html">API</a>
+</div>
+
+</body>
+</html>
