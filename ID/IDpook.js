@@ -1,6 +1,8 @@
-export const ID_POOK = {
-  type: "ID_POOK",
-  mode: "narrativ",
-  behavior: "erzählt",
-  active: false
+window.ID_POOK = {
+    mode: "pook",
+    active: true,
+    level: 2,
+    info() {
+        return "ID Pook-Modus aktiv";
+    }
 };
